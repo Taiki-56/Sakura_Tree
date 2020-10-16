@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="form-heading"><%= t(".contact_form") %></div>
+  <div class="form">
+    <% if @error_message %>
+      <div class="error_message">
+        <%= @error_message %>
+      </div>
+    <% end %>
+    <%= form_tag("/contacts/create") do %>
+      <p><%= t(".your_name") %></p>
+      <input name="name" value="<%= @name %>" class="input">
+      <p><%= t(".email") %></p>
+      <input name="email" value="<%= @email %>" class="input">
+      <p><%= t(".description") %></p>
+      <textarea name="message"><%= @message %></textarea>
+      <input type="submit" value="<%= t(".submit") %>" class="submit">
+    <% end %>
+  </div>
+</div>

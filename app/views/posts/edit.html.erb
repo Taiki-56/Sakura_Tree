@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="form-heading"><%= t(".edit") %></div>
+  <div class="edit-form">
+    <% if @error_message %>
+      <div class="error_message">
+        <%= @error_message %>
+      </div>
+    <% end %>
+    <%= form_tag("/posts/#{@post.id}/update", {multipart: true}) do %>
+      <label>                   <%# 画像など、ファイルをアップデートするときは”multipart: true”とする %>
+        <img src="<%= "/post_images/#{@post.image_name}" %>" class="post-img">
+        <input name="image" type="file" class="file">
+      </label>
+      <p><%= t(".category") %></p>
+      <select name="category">
+        <option value=""　selected><%= t(".select_a_category") %></option>
+        <option value="daily_items"><%= t(".daily_item") %></option>
+        <option value="vehicle"><%= t(".vehicle") %></option>
+        <option value="apartment"><%= t(".apartment") %></option>
+        <option value="job"><%= t(".job") %></option>
+        <option value="service"><%= t(".service") %></option>
+        <option value="community"><%= t(".community") %></option>
+      </select>
+      <p><%= t(".title") %></p>
+      <input type="text" name="title" value="<%= @post.title %>" class="input">
+      <p><%= t(".description") %></p>
+      <textarea name="content"><%= @post.content %></textarea>
+      <input type="submit" value="<%= t(".save") %>" class="submit">
+    <% end %>
+  </div>
+</div>

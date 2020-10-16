@@ -1,0 +1,169 @@
+en:
+  users:
+    new:
+      signup: "Signup"
+      user_name: "Contact name"
+      photo: "Profile photo"
+      email: "Email address"
+      password: "Password"
+      register: "Save"
+
+    create:
+      error_message: "Something went wrong"
+
+    login_form:
+      sign_in: "Sign in"
+      email: "Email address"
+      password: "Password"
+
+    login:
+      error_message: "Something went wrong"
+
+    show:
+      edit: "Edit"
+      your_post: "Your post"
+      see_posts_you_liked: "See posts you liked"
+
+    message_box:
+      messages_to_your_posts: "Messages to your posts"
+      messages_to_posts_you_are_interested_in: "Messages to posts you are interested in"
+      post_info: "%{post.title}  with %{user.name}"           # ここでは、#ではなく %を使ってメソッド？をかく。  どうやって "モデル名.カラム名"を反応させる？？
+
+    like:
+      posts_you_liked: "Posts you liked"
+
+    edit:
+      profile_setting: "Profile settings"
+      user_name: "Contact name"
+      save: "Save"
+
+
+
+  posts:
+    new:
+      post: "Post"
+      category: "Category"
+      select_a_category: "Select a category"
+      daily_item: "daily item"
+      vehicle: "Vehicle"
+      apartment: "Apartment"
+      job: "Job(Full time/ Part time)"
+      service: "Service"
+      community: "Community"
+      picture: "Picture"
+      title: "Title"
+      description: "Description"
+      post_button: "Post"
+
+    create:
+      error_message: "Something went wrong"
+
+    show:
+      edit: "Edit"
+      delete: "Delite"
+      send_messages: "Send messages"
+
+    edit:
+      edit: "Edit"
+      category: "Category"
+      select_a_category: "Select a category"
+      daily_item: "Daily item"
+      vehicle: "Vehicle"
+      apartment: "Apartment"
+      job: "Job(Full time/ Part time)"
+      service: "Service"
+      community: "Community"
+      title: "Title"
+      description: "Description"
+      save: "Save"
+
+    update:
+      error_message: "Something went wrong"
+
+    index:
+      new_posts: "Recently posted"
+
+    daily_item:
+      new_posts: "Daily item's new posts"
+
+    vehicle:
+      new_posts: "Vehicle's new posts"
+
+    apartment:
+      new_posts: "Apartment's new posts"
+
+    job:
+      new_posts: "Job's new posts"
+
+    service:
+      new_posts: "Service's new posts"
+
+
+    community:
+      new_posts: "Community's new posts"
+
+
+
+  rooms:
+    show:
+      submit: "Send"
+
+
+
+  contacts:
+    new:
+      contact_form: "Contact form"
+      your_name: "Your name"
+      email: "Email address"
+      description: "Description"
+      submit: "Send"
+
+    create:
+      error_message: "Something went wrong"
+
+
+
+  contact_message_mailer:
+    contact_message:
+      subject: "【Sakura Tree】Confirmation mail"
+
+
+
+  signup_mailer:
+    signup_message:
+      subject: "【Sakura Tree】Welcome to Sakura Tree %{name}!"
+
+
+
+  layouts:
+    application:
+      id: "ID"
+      created_at: "created at"
+      updated_at: "updated at"
+      sakura_tree: "Sakura Tree"
+      daily_item: "Daily item"
+      vehicle: "Vehicle"
+      apartment: "Apartment"
+      job: "Job(Full time/Part time)"
+      service: "Service"
+      community: "Community"
+      signup: "Sign up"
+      sign_in: "Sign in"
+      sign_out: "Sign out"
+      my_page: "My page"
+      new_post: "New post"
+      post_list: "Post list"
+      message_box: "Message box"
+      contact: "Contact"
+
+  flash:
+    signup: "Successfully signed up"
+    sign_in: "Successfully signed in"
+    sign_out: "See you soon"
+    user_edit: "updated your profile"
+
+    post_success: "Successfully posted"
+    post_edit: "Edited the post"
+    post_delete: "deleted the post"
+
+    notice: "Received yuor contact"

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="form-heading"><%= t(".profile_setting") %></div>
+  <div class="edit-form">
+    <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+      <label>                   <%# 画像など、ファイルをアップデートするときは”multipart: true”とする %>
+        <img src="<%= "/user_images/#{@user.image_name}" %>" class="user-img">
+        <input name="image" type="file" class="file">
+      </label>
+      <p><%= t(".user_name") %></p>
+      <input name="name" value="<%= @user.name %>" class="input">
+      <input type="submit" value="<%= t(".save") %>" class="submit">
+    <% end %>
+  </div>
+</div>

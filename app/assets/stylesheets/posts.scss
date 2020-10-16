@@ -1,0 +1,73 @@
+
+
+/* posts/show の見出し */
+
+.post-information {
+  width: 500px;
+  padding: 80px;
+  margin: auto;
+  border: 1px solid #dee7ec;
+  background-color: white;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    padding: 10px;
+    border: 1px solid #dee7ec;
+  }
+
+  a {
+    float: left;
+  }
+
+  .posted-date {
+    float: right;
+  }
+
+  .buttons {
+
+    .button {
+      margin-right: 10px;
+    }
+
+    .like-btn-unlike {
+      color: red;
+    }
+    .like-btn {
+      color: #8899a6;
+    }
+  }
+}
+
+
+
+/*ページネーションのデザイン    後に投稿の下に配置するように変更  */
+
+.pagination {
+  text-align: center;
+}
+
+
+
+/*
+.pagination>li>a {
+  border: none;
+  color: #696969;
+}
+
+/* 表示しているページ番号のデザイン
+.pagination>.active>a {
+  background: #93c9ff;
+  border-radius: 15px;
+}
+
+/*ホバー時のデザイン
+.pagination>li>a:hover {    /*角を丸くする
+} */

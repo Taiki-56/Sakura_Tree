@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="user-information">
+    <img src="<%= "/user_images/#{@user.image_name}" %>">
+    <h1><%= @user.name %></h1>
+    <% if @current_user.id == @user.id %>
+      <div class="edit-button">
+        <%= link_to t(".edit"), "/users/#{@user.id}/edit" %>    <%# link_to　に tメソッドを使うときは、書き方注意 %>
+      </div>
+    <% end %>
+  </div>
+  <div class="index-headline"><%= t ".your_post" %></div>
+  <div class="pagination"><%= paginate @posts %></div>
+  <% @posts.each do |post| %>
+    <%= link_to("/posts/#{post.id}", class: "link") do %>
+      <div class="posts-index">
+        <img src="<%= "/post_images/#{post.image_name}" %>" class ="post-picture">
+        <h3><%= post.title %></h3>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="clear"></div>
+  <div class="liked-posts-by-user">
+    <%= link_to t(".see_posts_you_liked"), "/users/#{@user.id}/like" %>
+  </div>
+</div>

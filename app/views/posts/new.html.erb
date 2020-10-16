@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="form-heading"><%= t(".post") %></div>
+  <div class="form">
+    <% if @error_message %>
+      <div class="error_message">
+        <%= @error_message %>
+      </div>
+    <% end %>
+    <%= form_tag("/posts/create", {multipart: true}) do %>
+      <p><%= t(".category") %></p>
+      <select name="category">
+        <option value=""　selected><%= t(".select_a_category") %></option>
+        <option value="daily_item"><%= t(".daily_item") %></option>
+        <option value="vehicle"><%= t(".vehicle") %></option>
+        <option value="apartment"><%= t(".apartment") %></option>
+        <option value="job"><%= t(".job") %></option>
+        <option value="service"><%= t(".service") %></option>
+        <option value="community"><%= t(".community") %></option>
+      </select>
+      <p><%= t(".picture") %></p>
+      <input name="image" type="file">
+      <p><%= t(".title") %></p>
+      <input type="text" name="title" value="<%= @title %>" class="input">
+      <p><%= t(".description") %></p>
+      <textarea name="content"><%= @post.content %></textarea>
+      <input type="submit" value="<%= t(".post_button") %>" class="submit">
+    <% end %>
+  </div>
+</div>

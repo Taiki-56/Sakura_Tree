@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="form-heading"><%= t(".signup") %></div>
+  <div class="form">
+    <% if @error_message %>
+      <div class="error_message">
+        <%= @error_message %>
+      </div>
+    <% end %>
+    <%= form_tag("/users/create", {multipart: true}) do %>
+      <p><%= t(".user_name") %></p>
+      <input name="name" value="<%= @name %>" class="input">
+      <p><%= t(".photo") %></p>
+      <input name="image" type="file">
+      <p><%= t(".email") %></p>
+      <input name="email" value="<%= @email %>" class="input">
+      <p><%= t(".password") %></p>
+      <input type="password" name="password" class="input">
+      <input type="submit" value="<%= t(".register") %>" class="submit">
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,282 @@
+
+/*  共通レイアウト */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background-color: #006666;
+  padding: 20px;
+
+  .header-top {
+    padding: 0 10px;
+
+    .home-button {
+      font-size: 30px;
+      float: left;
+    }
+
+    .locale-switch {
+      padding-right: 0;
+      float: right;
+      font-size: 20px;
+    }
+  }
+
+  .header-menus {
+    padding-top: 10px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .header-left {
+      float: left;
+
+      li {
+        float: left;
+        font-size: 20px;
+        margin-left: 10px;
+      }
+    }
+
+    .header-right {
+      float: right;
+
+      li {
+        float: left;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
+footer {
+  height: 100px;
+  background-color: #009933;
+  padding: 20px;
+
+  .to-contact-form {
+    float: right;
+  }
+}
+
+.container {
+  background-color: #E6FFE9;
+  padding: 30px;
+  padding-bottom: 100px;
+}
+
+
+.clear {                           /* float 解除 */
+  clear:both;
+}
+
+
+
+/*  Users(/new|/login_form|/edit), Post(/new|/edit), Contact(/new)の記入フォームの見出し　*/
+
+.form-heading {
+  font-size: 40px;
+  letter-spacing: 3px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+
+
+/*  Users(/new|/login_form|), Post(/new), Contact(/new)の記入フォームのレイアウト */
+
+.form  {
+  width: 500px;
+  padding: 80px;
+  margin: auto;
+  border: 1px solid #dee7ec;
+  background-color: white;
+
+  p {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .input {                                  /* 記入欄 */
+    width: 400px;
+    font-size: 25px;
+    margin-bottom: 30px;
+    border: 1px solid;
+  }
+
+  .submit {                                 /* 送信ボタン */
+    height: 40px;
+    width: 120px;
+    color: white;
+    background-color: #009900;
+    cursor: pointer !important;
+  }
+}
+
+
+
+/*  新規投稿、投稿編集の select タグ */
+
+select {
+  margin-bottom: 30px;
+}
+
+
+
+/*  Posts(new), Contact(/new) のお問い合わせページの textareaのレイアウト */
+
+textarea {
+  height: 100px;
+  width: 400px;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+
+
+.file {                   /*  何用だっけ  */
+  width: 400px;
+}
+
+
+
+/*  Users(/show|/like), Posts(/index|/categories) ページの見出し */
+
+.index-headline {
+  width: 100%;
+  font-size: 40px;
+  letter-spacing: 3px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+
+
+/*  Users(/show|/like), Posts(/index|/categories) ページの投稿s */
+
+.posts-index {
+  height: 400px;              /* titleが一行以上あると枠からはみ出してしまう 　要改良 */
+  width: 40%;
+  flex-wrap: wrap;
+  text-align: center;
+  float: left;
+  border: 1px solid #dee7ec;
+  margin: 20px 20px 20px 90px;
+  background-color: white;
+
+  .post-picture {               /* posts-index の中の画像、タイトルの幅の割合要調整 */
+    height: 350px;
+    width: 80%;
+  }
+
+  .h3 {
+    float: left;
+  }
+}
+
+
+
+/*  Users/edit, Posts/editの記入フォーム    見出しはここの 87行目に書いてる       */
+
+.edit-form {
+  width: 500px;
+  padding: 80px;
+  margin: auto;
+  border: 1px solid #dee7ec;
+  background-color: white;
+
+  p {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  input {
+    width: 400px;
+    font-size: 25px;
+    margin-bottom: 30px;
+    border: 1px solid;
+  }
+
+  label {
+    text-align: center;               /* これだけではダメで */
+    display: block;                   /* これを書くと動く*/
+
+    .user-img {                       /* postの編集ページも含め、画像の近くに、"画像を編集する"とか書いたほうがいいかも */
+      height: 400px;
+      width: 400px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+
+    .post-img {
+      height: 400px;
+      width: 400px;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+
+    .file {
+      display: none;
+      cursor: pointer;
+    }
+  }
+
+  .submit {
+    height: 40px;
+    width: 120px;
+    color: white;
+    background-color: #009900;
+    cursor: pointer !important;
+  }
+}
+
+
+
+/*  フラッシュ ================================ */
+
+.flash {
+  padding: 10px 0;
+  color: white;
+  background: rgb(251, 170, 88);
+  text-align: center;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+
+
+
+/*  画像の下の小さなスペースを消す */
+
+img {
+  vertical-align: top;
+}
+
+
+
+/*  Posts/index とかのlink_toを親要素全体に広げたリンクのデザイン */
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/* 新規投稿や編集ページでのエラーメッセージ */
+
+.error_message {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+}

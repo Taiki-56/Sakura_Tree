@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sakura_Tree</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/73f77ee89a.js" crossorigin="anonymous"></script>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="home-button">
+          <%= link_to("/") do %>
+            <i class="fas fa-tree"><%= t(".sakura_tree") %></i>
+          <% end %>
+        </div>
+        <div class="locale-switch">
+          <% if I18n.locale.to_s == "en" %>
+            <%= link_to('日本語', :locale => 'ja') %>
+          <% else %>
+            <%= link_to('English', :locale => 'en') %>
+          <% end %>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="header-menus">
+        <ul class="header-left">
+          <li>
+            <%= link_to t(".daily_item") , "/posts/daily_item" %>
+          </li>
+          <li>
+            <%= link_to t(".vehicle"), "/posts/vehicle" %>
+          </li>
+          <li>
+            <%= link_to t(".apartment"), "/posts/apartment" %>
+          </li>
+          <li>
+            <%= link_to t(".job"), "/posts/job" %>
+          </li>
+          <li>
+            <%= link_to t(".service"), "/posts/service" %>
+          </li>
+          <li>
+            <%= link_to t(".community"), "/posts/community" %>
+          </li>
+        </ul>
+        <ul class="header-right">
+          <% if @current_user %>
+            <li>
+              <%= link_to t(".my_page"), "/users/#{@current_user.id}" %>
+            </li>
+            <li>
+              <%= link_to t(".new_post"), "/posts/new" %>
+            </li>
+            <li>
+              <%= link_to t(".post_list"), "/posts/index" %>
+            <li>
+              <%= link_to t(".sign_out"), "/logout", {method: :post} %>
+            </li>
+            <li>
+              <%= link_to t(".message_box"), "/users/#{@current_user.id}/message_box" %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to t(".signup"), "/signup" %>
+            </li>
+            <li>
+              <%= link_to t(".sign_in"), "/login" %>
+            </li>
+            <li>
+              <%= link_to t(".post_list"), "/posts/index" %>
+            </li>
+          <% end %>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </header>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+    <footer>
+      <%= link_to t(".contact"), "/contacts/new", {class:"to-contact-form"} %>
+    </footer>
+  </body>
+</html>

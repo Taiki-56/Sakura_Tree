@@ -1,0 +1,170 @@
+ja:
+  users:
+    new:
+      signup: "新規ユーザー登録"
+      user_name: "ユーザー名"
+      photo: "プロフィール画像"
+      email: "メールアドレス"
+      password: "パスワード"
+      register: "新規登録"
+
+    create:
+      error_message: "不備があります"
+
+    login_form:
+      sign_in: "ログイン"
+      email: "メールアドレス"
+      password: "パスワード"
+
+    login:
+      error_message: "メールアドレスまたはパスワードが間違っています"
+
+    show:
+      edit: "編集する"
+      your_post: "あなたの投稿"
+      see_posts_you_liked: "いいねした投稿を見る"
+
+    message_box:
+      messages_to_your_posts: "あなたの投稿に対するメッセージ"
+      messages_to_posts_you_are_interested_in: "あなたが興味がある投稿に対するメッセージ"
+      post_info: "%{post.title}  with %{user.name}"           # ここでは、#ではなく %を使ってメソッド？をかく。
+
+    like:
+      posts_you_liked: "あなたがいいねした投稿"
+
+    edit:
+      profile_setting: "プロフィール設定"
+      user_name: "ユーザー名"
+      save: "変更"
+
+
+
+  posts:
+    new:
+      post: "投稿してみよう"
+      category: "カテゴリー"
+      select_a_category: "カテゴリーを選択して下さい"
+      daily_item: "日用品"
+      vehicle: "乗り物"
+      apartment: "アパート"
+      job: "仕事/アルバイト"
+      service: "サービス"
+      community: "交流"
+      picture: "画像"
+      title: "タイトル"
+      description: "投稿内容"
+      post_button: "投稿"
+
+    create:
+      error_message: "不備があります"
+
+    show:
+      edit: "編集する"
+      delete: "削除する"
+      send_messages: "連絡する"
+
+    edit:
+      edit: "投稿を編集する"
+      category: "カテゴリー"
+      select_a_category: "カテゴリーを選択して下さい"
+      daily_item: "日用品"
+      vehicle: "乗り物"
+      apartment: "アパート"
+      job: "仕事/アルバイト"
+      service: "サービス"
+      community: "交流"
+      title: "タイトル"
+      description: "投稿内容"
+      save: "更新"
+
+    update:
+      error_message: "不備があります"
+
+
+    index:
+      new_posts: "最新の投稿"
+
+    daily_item:
+      new_posts: "日用品関連の最新の投稿"
+
+    vehicle:
+      new_posts: "乗り物関連の最新の投稿"
+
+    apartment:
+      new_posts: "アパート関連の最新の投稿"
+
+    job:
+      new_posts: "仕事関連の最新の投稿"
+
+    service:
+      new_posts: "サービス関連の最新の投稿"
+
+
+    community:
+      new_posts: "交流関連の最新の投稿"
+
+
+
+  rooms:
+    show:
+      submit: "送信"
+
+
+
+  contacts:
+    new:
+      contact_form: "お問い合わせ"
+      your_name: "お名前"
+      email: "メールアドレス"
+      description: "お問い合わせ内容"
+      submit: "送信"
+
+    create:
+      error_message: "不備があります"
+
+
+
+  contact_message_mailer:
+    contact_message:
+      subject: "【さくらの木】お問い合わせの確認メール"
+
+
+
+  signup_mailer:
+    signup_message:
+      subject: "【さくらの木】%{name}様、ご登録ありがとうございます"
+
+
+
+  layouts:
+    application:
+      id: "ID"
+      created_at: "作成日時"
+      updated_at: "更新日時"
+      sakura_tree: "Sakura Tree"
+      daily_item: "日用品"
+      vehicle: "乗り物"
+      apartment: "アパート"
+      job: "仕事/アルバイト"
+      service: "サービス"
+      community: "交流"
+      signup: "新規登録"
+      sign_in: "ログイン"
+      sign_out: "ログアウト"
+      my_page: "マイページ"
+      new_post: "新規投稿"
+      post_list: "投稿一覧"
+      message_box: "メッセージボックス"
+      contact: "お問い合わせ"
+
+    flash:
+      signup: "ユーザー登録が完了しました"
+      sign_in: "ログインしました"
+      sign_out: "ログアウトしました"
+      user_edit: "編集しました"
+
+      post_success: "投稿しました"
+      post_edit: "投稿を編集しました"
+      post_delete: "投稿を削除しました"
+
+      notice: "お問い合わせを承りました"

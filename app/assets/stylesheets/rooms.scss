@@ -1,0 +1,66 @@
+
+
+/* DMページのレイアウト */
+.chatting {
+
+  .chatting-left {                          /* メッセージを表示するところのレイアウト */
+  width: 60%;
+  padding: 50px;
+  border: 1px solid #dee7ec;
+  background-color: white;
+  float:left;
+
+    .your-messages  {                       /* ログインしているユーザーのメッセージを右に表示するため */
+      float: right;
+    }
+
+    .others-messages {                      /* 相手のメッセージを左に表示するため */
+      float:left;
+    }
+  }
+
+  .chatting-right {                         /* チャットの目的になっている投稿の情報を表示 */
+    width: 30%;
+    float:right;
+
+      .chatting-image {                     /* 投稿の画像を真ん中に表示するため */
+        text-align: center;
+
+        img {
+          width: 90%;
+          margin: auto;
+        }
+      }
+
+      h4 {
+        margin: 10px 0;
+        font-size: 30px;
+      }
+
+      p {
+        margin-left: auto;
+      }
+
+    .message-form {               /* メッセージを打ち込むフォームを囲んだボックス　text-formと共にレイアウトを変える */
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #dee7ec;
+      background-color: white;
+
+      .text-form {                          /* メッセージフォーム　 */
+        width: 75%;
+        padding: 0 0 7px 0;
+        font-size: 20px;
+      }
+
+      .form-submit {
+        height: 40px;
+        width: 80px;
+        color: white;
+        background-color: #009900;          /* なぜ background-color を指定しないと css が反応しない?? */
+        margin-left: 10px;
+        cursor: pointer !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="index-headline"><%= t(".new_posts") %></div>
+  <div class="pagination"><%= paginate @posts %></div>
+  <% @posts.each do |post| %>
+    <%= link_to("/posts/#{post.id}", class: "link") do %>
+      <div class="posts-index">
+        <img src="<%= "/post_images/#{post.image_name}" %>" class ="post-picture">
+        <h3><%= post.title %></h3>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="clear"></div>
+</div>
