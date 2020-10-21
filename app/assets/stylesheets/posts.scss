@@ -9,6 +9,7 @@
   border: 1px solid #dee7ec;
   background-color: white;
 
+
   img {
     height: 100%;
     width: 100%;
@@ -27,22 +28,20 @@
     float: left;
   }
 
-  .posted-date {
-    float: right;
+  .button {
+    margin-right: 10px;
   }
 
-  .buttons {
+  .like-btn-unlike {
+    color: red;
+  }
 
-    .button {
-      margin-right: 10px;
-    }
+  .like-btn {
+    color: #8899a6;
+  }
 
-    .like-btn-unlike {
-      color: red;
-    }
-    .like-btn {
-      color: #8899a6;
-    }
+  .posted-date {
+    float: right;
   }
 }
 

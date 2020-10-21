@@ -3,26 +3,22 @@
     <img src="<%= "/post_images/#{@post.image_name}" %>">
     <h1><%= @post.title %></h1>
     <p><%= @post.content %></p>
-    <div class="posted-date">
-      <%= @post.updated_at.strftime('%Y/%m/%d') %>
-    </div>
-    <div class="buttons">
-      <% if @current_user %>        <%# ユーザー登録してなくても、投稿詳細ページをみられるようにするため  急にいいねボタンが見えなくなった。編集するボタンの左側に見えないスペースがあり、押すと反応するが、CSSにもおかしなとこはない　なぜ？？？　%>
-        <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
-          <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
-            <span class="fa fa-heart like-btn-unlike button"></span>
-          <% end %>
-        <% else %>
-          <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
-            <span class="fa fa-heart like-btn button"></span>
-          <% end %>
+    <div class="posted-date"><%= @post.updated_at.strftime('%Y/%m/%d') %></div>
+    <% if @current_user %>        <%# ユーザー登録してなくても、投稿詳細ページをみられるようにするため  急にいいねボタンが見えなくなった。編集するボタンの左側に見えないスペースがあり、押すと反応するが、CSSにもおかしなとこはない　なぜ？？？　%>
+      <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
+        <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
+          <span class="fa fa-heart like-btn-unlike button"></span>
         <% end %>
-        <% if @current_user && @current_user.id == @post.user_id %>
-          <%= link_to t(".edit"), "/posts/#{@post.id}/edit", {class: "button"} %>
-          <%= link_to t(".delete"), "/posts/#{@post.id}/destroy", {class: "button"} %>
-      　 <% end %>
+      <% else %>
+        <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
+          <span class="fa fa-heart like-btn button"></span>
+        <% end %>
       <% end %>
-    </div>
+      <% if @current_user && @current_user.id == @post.user_id %>
+        <%= link_to t(".edit"), "/posts/#{@post.id}/edit", {class: "button"} %>
+        <%= link_to t(".delete"), "/posts/#{@post.id}/destroy", {class: "button"} %>
+      <% end %>
+    <% end %>
     <% if @current_user %>　　　　　　<%# ユーザー登録してなかったら、ログインページに飛ばすため %>
       <% if @user.id == @current_user.id %>
       <% else %>
